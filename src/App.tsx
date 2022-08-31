@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
+import { useColorScheme } from '@mantine/hooks';
+import { useState } from 'react';
+import { FooterClaudio } from './components/footer/Footer';
+import { HeaderResponsive } from './components/navbar/Navbar';
+import links from './data/DataNavbar.json'
 
-function App() {
+export default function App() {
+  const preferredColorScheme = useColorScheme();
+  const [colorScheme, setColorScheme] = useState<ColorScheme>(preferredColorScheme);
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ColorSchemeProvider colorScheme={colorScheme}
+    toggleColorScheme={toggleColorScheme}>
+    <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+      <HeaderResponsive { ...links }/>
+
+      <FooterClaudio></FooterClaudio>
+  
+    </MantineProvider>
+    </ColorSchemeProvider>
+    
   );
 }
-
-export default App;
