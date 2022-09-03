@@ -19,6 +19,7 @@ export default function App() {
     <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
       <HeaderResponsive { ...links }/>
       <MyProfile />
+      <h1>test macbook</h1>
       <FooterClaudio></FooterClaudio>
   
     </MantineProvider>
