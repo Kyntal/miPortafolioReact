@@ -5,6 +5,8 @@ import { FooterClaudio } from './components/footer/Footer';
 import { HeaderResponsive } from './components/navbar/Navbar';
 import links from './data/DataNavbar.json'
 import { MyProfile } from './components/profile/profileIndex';
+import { MainInfo } from './components/profile/mainInfo';
+import 'animate.css';
 
 export default function App() {
   const preferredColorScheme = useColorScheme();
@@ -18,6 +20,7 @@ export default function App() {
     toggleColorScheme={toggleColorScheme}>
     <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
       <HeaderResponsive { ...links }/>
+      <MainInfo />
       <MyProfile />
       <h1>test macbook</h1>
       <FooterClaudio></FooterClaudio>

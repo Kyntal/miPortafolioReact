@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '@mantine/ds';
 import { SegmentedToggle } from '../switch/switchToggle';
 
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT = 47;
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -100,7 +99,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
+    <Header height={HEADER_HEIGHT} mb={-1} className={classes.root}>
       <Container className={classes.header}>
         <Text>
           Claudio Chuhaicura
