@@ -102,7 +102,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} mb={-1} className={classes.root}>
       <Container className={classes.header}>
         <Text>
-          Claudio Chuhaicura
+          Claudio Chuhaicura | Full Stack Developer
         </Text>
         <Group spacing={5} className={classes.links}>
           {items}

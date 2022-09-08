@@ -9,7 +9,8 @@ interface UserInfoActionProps {
 
 const miEstilo = {
   div: {
-    backgroundColor: "light"
+    marginLeft: '30%',
+    marginRight: '30%'
   }
 }
 
@@ -32,7 +33,7 @@ export function UserInfoAction({ icono, nombre, email, trabajo }: UserInfoAction
           {email} • {trabajo}
         </Text>
 
-        <Button variant="default" fullWidth mt="md">
+        <Button variant="default" fullWidth mt="sm">
           Send message
         </Button>
       </Paper>

@@ -1,5 +1,4 @@
-import 'animate.css';
-
+import { AboutMe } from "../about/aboutMe";
 
 const nombre = {
     h1: {
@@ -8,15 +7,15 @@ const nombre = {
         fontSize: '38px',
         lineHeight: '29px',
         letterSpacing: '0.16em',
-        marginLeft: '230px'
+        marginLeft: '230px',
     }
 }
 
 const descCorta = {
     p: {
-        width: '47em',
+        width: '57em',
         fontWeight: 'normal',
-        paddingLeft:'450px',
+        paddingLeft:'38%',
         fontSize: '24px',
         lineHeight: '29px',
         letterSpacing: '0.16em'
@@ -25,15 +24,21 @@ const descCorta = {
 
 export function MainInfo() {
     return(
+        <div className='animate__animated animate__backInUp'>
+            <div style={{marginLeft:'10px'}}>
+                <div style={{position: 'relative'}}>
+                    <h1 style={nombre.h1}>Claudio Chuhaicura</h1>
+                    <div style={{position:'relative'}}>
+                        <p style={descCorta.p}>Desarrollador Full Stack enamorado del aprendizaje y el crecimiento profesional.</p>
+                    </div>   
+                </div>
+            </div>
 
-        <div className='animate__backInDown' style={{marginLeft:'10px'}}>
-            <div style={{position: 'relative'}}>
-                <h1 style={nombre.h1}>Claudio Chuhaicura</h1>
-                <div style={{position:'relative'}}>
-                    <p style={descCorta.p}>Desarrollador Full Stack enamorado del aprendizaje y el crecimiento profesional.</p>
-                </div>   
+            <div>
+                <AboutMe />
             </div>
         </div>
+        
         
     );
 }
