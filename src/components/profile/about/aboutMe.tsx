@@ -1,3 +1,4 @@
+import { NavIcons } from "../../iconBar/navIcons";
 
 const about = {
     title: {
@@ -28,6 +29,9 @@ export function AboutMe() {
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
+            <br />
+
+            <NavIcons />
         </div>
     );
 }
