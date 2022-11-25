@@ -1,4 +1,5 @@
 import { NavIcons } from "../../iconBar/navIcons";
+import '../../../assets/css/stylesAboutMe.css'
 
 const about = {
     title: {
@@ -16,21 +17,31 @@ const about = {
         fontSize: '24px',
         lineHeight: '29px',
         letterSpacing: '0.16em'
+    },
+    subtitle: {
+        width: '12em',
+        height: '70px',
+        fontSize: '24px',
+        lineHeight: '29px',
+        letterSpacing: '0.16em',
+        marginLeft: '28%'
     }
 }
 
 export function AboutMe() {
     return (
         <div>
-            <h1 style={about.title}>Acerca de mí</h1>
+            <h1 style={about.title} className='gradient-text'>Acerca de mí</h1>
             
             <p style={about.description}> 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Desarrollador apasionado por la creación de nuevos productos digitales,
+                mi pasión comienza desde pequeño al intentar modificar un videojuego, mi favorito hasta el momento.<br></br>
+                Siempre intentando generar soluciones o provechos de lo que se puede lograr para los demás a través de la tecnología.
             </p>
             <br />
-
+                <p style={about.subtitle} className='gradient-text'>
+                    Actualidad
+                </p>
             <NavIcons />
         </div>
     );

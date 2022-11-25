@@ -9,8 +9,7 @@ import { MainInfo } from './components/profile/mainInfo';
 import 'animate.css';
 
 export default function App() {
-  const preferredColorScheme = useColorScheme();
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(preferredColorScheme);
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 

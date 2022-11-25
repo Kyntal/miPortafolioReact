@@ -34,9 +34,7 @@ export function MainInfo() {
                 </div>
             </div>
 
-            <div>
                 <AboutMe />
-            </div>
         </div>
         
         
