@@ -1,35 +1,37 @@
 import iconTs from '../../assets/icons/typescript.svg';
 import iconJs from '../../assets/icons/js.svg';
+import iconAngular from '../../assets/icons/angular-icon.svg';
 
 const styleIcon = {
     bg: {
-        backgroundColor: '#D5CBC9',
-        borderStyle: 'solid',
+        backgroundColor: 'rgb(16 15 15 / 50%)',
         borderWidth: '20px',
         borderRadius: '30px'
     },
     img: {
-        maxWidth: '50%',
-        width: '250px',
-        height: '250px',
+        maxWidth: '100%',
+        width: '200px',
+        height: '200px',
         paddingLeft: '10%',
+        paddingTop:'10%',
 
     },
     js: {
         paddingLeft: '5%'
     },
     tamanhoNav: {
-        marginLeft: '20px'
+        marginTop: '3%',
+        marginLeft: '20%',
+        marginRight: '20%'
     }
 }
 export function NavIcons() {
     return(
         <div>
-            <h2>soy una imagen</h2>
             <div style={styleIcon.tamanhoNav}>
                 <div style={styleIcon.bg}>
-                    <img src={iconTs} style={styleIcon.img} />
-                    <img src={iconJs} style={styleIcon.js}/>
+                    <img src={iconJs} style={styleIcon.img}/>
+                    <img src={iconAngular} style={styleIcon.img} />
                 </div>
             </div>
             
